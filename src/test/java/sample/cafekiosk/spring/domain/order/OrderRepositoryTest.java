@@ -29,12 +29,6 @@ class OrderRepositoryTest {
   @Autowired
   private OrderRepository orderRepository;
 
-  @AfterEach
-  void tearDown() {
-    orderRepository.deleteAllInBatch();
-    productRepository.deleteAllInBatch();
-  }
-
   @DisplayName("주어진 기간 내 결제완료된 주문 리스트를 조회한다.")
   @Test
   void test() {
